@@ -17,4 +17,32 @@ abstract class Product implements Serializable {
     public String getProductID() {
         return productID;
     }
+
+    public void setProductID(String productID) {
+        this.productID = productID;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public int getAvailableQty() {
+        return availableQty;
+    }
+
+    public void setAvailableQty(int availableQty) {
+        this.availableQty = availableQty;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 }
