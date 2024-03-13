@@ -93,3 +93,48 @@ class Electronics extends Product implements Serializable { // Using Serializabl
         System.out.println("--------------------------------------------");
     }
 }
+
+class Clothing extends Product implements Serializable { // Using Serializable indicate that instances of these classes can be serialized.
+    private String size;
+    private String color;
+
+    public Clothing (String productID, String productName, int availableQty, double price, String size, String color){
+        super (productID, productName,availableQty,price);
+        this.size = size;
+        this.color = color;
+    }
+
+    // Getters and Setters for Clothing - Specific attributes
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String toString() {
+        return super.toString() +
+                "\nSize: " + size +
+                "\nColor: " + color;
+    }
+
+    public void displayDetails() {
+        System.out.println("Clothing Details: ");
+        System.out.println("Product ID: " + getProductID());
+        System.out.println("ProductName: " + getProductName());
+        System.out.println("Available Quantity: " + getAvailableQty());
+        System.out.println("Price: $" + getPrice());
+        System.out.println("Size: " + getSize());
+        System.out.println("Color: " + getColor());
+        System.out.println("--------------------------------------------");
+    }
+}
